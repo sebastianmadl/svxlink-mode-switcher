@@ -13,9 +13,18 @@ Ein einfaches Bash-Script für Debian Bookworm, das den Betriebsmodus eines SVXL
 
 ---
 
+## Versionen
+
+| Datei | Befehl | Beschreibung |
+|-------|--------|-------------|
+| `svxlink-switcher-v2.sh` | `sudo svxlink-switcher` | **Empfohlen** – Schritt-für-Schritt Menü: Config und Betriebsmodus getrennt wählbar, mit Zusammenfassung und Bestätigung |
+| `svxlink-switcher.sh` | `sudo svxlink-simple-switcher` | Einfache Version – direkt zwischen Simplex und Duplex umschalten |
+
+---
+
 ## Was macht das Script?
 
-Beim Start zeigt das Script ein übersichtliches Terminal-Menü. Nach Eingabe von `1` oder `2` führt es automatisch folgende Schritte aus:
+Beim Start zeigt das Script ein übersichtliches Terminal-Menü. Es führt automatisch folgende Schritte aus:
 
 1. **SA818S konfigurieren** – startet das passende Python-Script, das das SA818S-Funkmodul für den gewählten Modus programmiert
 2. **SVXLink Config umkopieren** – kopiert die passende Konfigurationsdatei nach `/etc/svxlink/svxlink.conf`
@@ -52,27 +61,38 @@ Jeder Schritt wird farbig im Terminal angezeigt. Bei einem Fehler bricht das Scr
 
 ```bash
 git clone https://github.com/sebastianmadl/svxlink-mode-switcher.git
-sudo mv svxlink-mode-switcher/svxlink-switcher.sh /usr/local/bin/svxlink-switcher
+
+# Empfohlene Version (v2)
+sudo mv svxlink-mode-switcher/svxlink-switcher-v2.sh /usr/local/bin/svxlink-switcher
 sudo chmod +x /usr/local/bin/svxlink-switcher
+
+# Einfache Version
+sudo mv svxlink-mode-switcher/svxlink-switcher.sh /usr/local/bin/svxlink-simple-switcher
+sudo chmod +x /usr/local/bin/svxlink-simple-switcher
+
 rm -rf svxlink-mode-switcher
 ```
 
-Danach ist das Script von überall aufrufbar:
+Danach sind beide Scripts von überall aufrufbar:
 
 ```bash
-sudo svxlink-switcher
+sudo svxlink-switcher          # Erweiterte Version (v2)
+sudo svxlink-simple-switcher   # Einfache Version
 ```
 
 ### Manuelle Installation
 
 ```bash
-# 1. Script herunterladen / kopieren
-nano svxlink-switcher.sh
 # Inhalt einfügen, dann Ctrl+O → Enter → Ctrl+X
+nano svxlink-switcher-v2.sh
+nano svxlink-switcher.sh
 
-# 2. Ausführbar machen und verschieben
-sudo mv svxlink-switcher.sh /usr/local/bin/svxlink-switcher
+# Verschieben und ausführbar machen
+sudo mv svxlink-switcher-v2.sh /usr/local/bin/svxlink-switcher
 sudo chmod +x /usr/local/bin/svxlink-switcher
+
+sudo mv svxlink-switcher.sh /usr/local/bin/svxlink-simple-switcher
+sudo chmod +x /usr/local/bin/svxlink-simple-switcher
 ```
 
 ---
