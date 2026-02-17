@@ -24,9 +24,9 @@ echo -e "${CYAN}                    by OE1SXM / Sebastian M.${NC}"
 echo ""
 
 # ── Frage 1: Welche Config? ──────────────────────────────────────
-echo -e "${CYAN}── Schritt 1: SVXLink Konfiguration ────────────────────────${NC}"
+echo -e "${YELLOW}── Schritt 1: SVXLink Konfiguration ────────────────────────${NC}"
 echo ""
-echo -e "  ${YELLOW}0${NC}) Keine Änderung"
+echo -e "  ${GREEN}0${NC}) Keine Änderung"
 echo -e "  ${GREEN}1${NC}) Simplex Config  (svxlink.conf.simplex)"
 echo -e "  ${GREEN}2${NC}) Duplex Config   (svxlink.conf.duplex)"
 echo ""
@@ -45,9 +45,9 @@ esac
 echo ""
 
 # ── Frage 2: Welcher Betriebsmodus (SA818)? ──────────────────────
-echo -e "${CYAN}── Schritt 2: Betriebsmodus (SA818S) ───────────────────────${NC}"
+echo -e "${YELLOW}── Schritt 2: Betriebsmodus (SA818S) ───────────────────────${NC}"
 echo ""
-echo -e "  ${YELLOW}0${NC}) Keine Änderung"
+echo -e "  ${GREEN}0${NC}) Keine Änderung"
 echo -e "  ${GREEN}1${NC}) Simplex Betrieb"
 echo -e "  ${GREEN}2${NC}) Duplex Betrieb"
 echo ""
@@ -65,7 +65,7 @@ esac
 
 # ── Zusammenfassung & Bestätigung ────────────────────────────────
 echo ""
-echo -e "${CYAN}── Zusammenfassung ──────────────────────────────────────────${NC}"
+echo -e "${YELLOW}── Zusammenfassung ──────────────────────────────────────────${NC}"
 echo ""
 echo -e "  Config:  ${YELLOW}${CONFIG_LABEL}${NC}"
 echo -e "  Modus:   ${YELLOW}${MODE_LABEL}${NC}"
