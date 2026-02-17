@@ -30,7 +30,7 @@ echo -e "  ${GREEN}0${NC}) Keine Änderung"
 echo -e "  ${GREEN}1${NC}) Simplex Config  (svxlink.conf.simplex)"
 echo -e "  ${GREEN}2${NC}) Duplex Config   (svxlink.conf.duplex)"
 echo ""
-read -p "$(echo -e "Welche Config? (${YELLOW}0${NC}, ${GREEN}1${NC} oder ${GREEN}2${NC}): ")" config_choice
+read -p "$(echo -e "Welche Config? (${GREEN}0${NC}, ${GREEN}1${NC} oder ${GREEN}2${NC}): ")" config_choice
 
 case $config_choice in
     0) CONFIG_SRC=""
@@ -51,7 +51,7 @@ echo -e "  ${GREEN}0${NC}) Keine Änderung"
 echo -e "  ${GREEN}1${NC}) Simplex Betrieb"
 echo -e "  ${GREEN}2${NC}) Duplex Betrieb"
 echo ""
-read -p "$(echo -e "Welcher Modus? (${YELLOW}0${NC}, ${GREEN}1${NC} oder ${GREEN}2${NC}): ")" mode_choice
+read -p "$(echo -e "Welcher Modus? (${GREEN}0${NC}, ${GREEN}1${NC} oder ${GREEN}2${NC}): ")" mode_choice
 
 case $mode_choice in
     0) SA818_SCRIPT=""
